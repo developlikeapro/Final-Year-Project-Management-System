@@ -5,6 +5,8 @@
  */
 package fyp_management_system;
 
+import java.util.Scanner;
+
 /**
  *
  * @author M GHOUS
@@ -14,14 +16,15 @@ public class FYP_Management_System {
     /**
      * @param args the command line arguments
      */
+    public static Ccontroler Ocontroler=null;
+    
     public static void main(String[] args) {
         // TODO code application logic 
     //static public Ccontroler Ocontroler=null;
-       		System.out.print("Condition:  ");
+    
+       		System.out.print("Condition:\n");
                 System.out.println("Running.....:");
-Cperson obj= new Cperson();
-obj.get
-
+            
     }
     
 }

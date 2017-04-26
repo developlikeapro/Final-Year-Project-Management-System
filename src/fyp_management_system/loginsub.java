@@ -1,6 +1,6 @@
 package fyp_management_system;
 
-import FYP_Management_System.*;
+
 import java.util.*;
 
 public class loginsub
