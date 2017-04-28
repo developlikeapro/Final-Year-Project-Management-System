@@ -28,8 +28,5 @@ public class loginsub
 		this.setusername(username);
 		this.setpass(pass);
 	}
-        public final void esi()
-        {
-            //kch nhi just for checking
-        }
+        
 }
