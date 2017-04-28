@@ -8,7 +8,8 @@ public enum Erole
 	Student,
 	Advisor,
 	Internal,
-	External;
+	External,
+	hello;
 
 	public static final int SIZE = java.lang.Integer.SIZE;
 
