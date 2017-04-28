@@ -12,7 +12,7 @@ public class Clogin
 		if (role == Erole.Student)
 		{
                         ArrayList<Cstudent> stlist = FYP_Management_System.Ocontroler.Lststud;
-
+			//Student Role
                         for (int i = 0; i < stlist.size(); i++)
                         {
                                 if (user.getusername().equals(stlist.get(i).getusername()) && stlist.get(i).getpassword().equals(user.getpass()))
