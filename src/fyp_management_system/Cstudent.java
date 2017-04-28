@@ -61,6 +61,7 @@ public class Cstudent extends Cperson implements Istudent {
     }
 
     public Cstudent(String f_name, String l_name, String address, String contact_num, java.time.LocalDateTime dob, String email, Egender gender, int cnic, String username, String pass, int studid, double cgpa) {
+
         setfirstname(f_name);
         setlastname(l_name);
         this.setaddress(address);
@@ -102,10 +103,9 @@ public class Cstudent extends Cperson implements Istudent {
         save();
 //
     }
-    
-//done
 
-    public final void checkrecomendation() {
+//done
+    public final void checkrecommendation() {
         for (int i = 0; i < notifications.size(); i++) {
             if (notifications.get(i).getsubject() == Esub.Recomendation) {
                 notifications.get(i).printresomendation();

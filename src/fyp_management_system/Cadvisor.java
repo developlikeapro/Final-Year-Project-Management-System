@@ -33,7 +33,8 @@ public class Cadvisor extends Cperson implements Iadvisor {
         notifications = value;
     }
 
-    public Cadvisor(String f_name, String l_name, String address, String contact_num, java.time.LocalDateTime dob, String email, Egender gender, int cnic, String username, String pass) {
+    public Cadvisor(int advisorid, String f_name, String l_name, String address, String contact_num, java.time.LocalDateTime dob, String email, Egender gender, int cnic, String username, String pass) {
+        this.advisorid = advisorid;
         setfirstname(f_name);
         setlastname(l_name);
         this.setaddress(address);
@@ -52,7 +53,7 @@ public class Cadvisor extends Cperson implements Iadvisor {
 //done
     public final void checking_proposed_idea(int studid) {
         int i = searchid(studid);
-        if (searchid(studid) != -1) {
+        if (i != -1) {
             System.out.println("Project :\n" + studentlist.get(i).getlstofideas().get(studentlist.get(i).getlstofideas().size() - 1).getidea());
             System.out.println("1 For Accept\n2 For Reject");
             String s = new Scanner(System.in).nextLine();
@@ -81,9 +82,9 @@ public class Cadvisor extends Cperson implements Iadvisor {
     }
 
 //done
-    public final void provide_recomendation(int studid) {
+    public final void provide_recommendation(int studid) {
         int i = searchid(studid);
-        if (searchid(studid) != -1) {
+        if (i != -1) {
             System.out.println(studentlist.get(i).getselectedproject().getprojectidea().getidea());
             System.out.println("Enter Recomendations??");
             String s = new Scanner(System.in).nextLine();
@@ -99,12 +100,12 @@ public class Cadvisor extends Cperson implements Iadvisor {
 //done
     public final void view_project(int studid) {
         int i = searchid(studid);
-        if (searchid(studid) != -1) {
+        if (i != -1) {
             System.out.println("Github Address :" + studentlist.get(i).getselectedproject().getproject_github_address());
         } else {
             System.out.println("Not found");
         }
-       // save();
+        // save();
     }
 
     private int searchid(int studid) {
@@ -131,9 +132,33 @@ public class Cadvisor extends Cperson implements Iadvisor {
         for (int i = 0; i < FYP_Management_System.Ocontroler.Lstadvisor.size(); i++) {
             if (this.advisorid == FYP_Management_System.Ocontroler.Lstadvisor.get(i).advisorid) {
                 FYP_Management_System.Ocontroler.Lstadvisor.set(i, this);
+                break;
             }
         }
 
     }
-    
+
+    public void recomendtointernal(int studid, int internalid) {
+        int i = searchid(studid);
+        if (i != -1) {
+            for (int j = 0; j < FYP_Management_System.Ocontroler.Lstinternal.size(); j++) {
+                if (FYP_Management_System.Ocontroler.Lstinternal.get(j).getinternalid()
+                        == internalid) {
+                    FYP_Management_System.Ocontroler.Lstinternal.get(j).getstudentlist().add(studentlist.get(i));
+                    FYP_Management_System.Ocontroler.Lstinternal.get(j).getnotifications().add(
+                            new Cnotification(
+                                    "A Student Is Forwarded To You For Internal Evaluaion",
+                                    Esub.InternalEvaluation,
+                                    Erole.Advisor,
+                                    Erole.Internal));
+                    break;
+                }
+            }
+
+        } else {
+            System.out.println("Student IdNot found");
+
+        }
+    }
+
 }

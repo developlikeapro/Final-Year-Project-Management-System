@@ -6,6 +6,6 @@ public interface Istudent {
 
     void updateproject(String addr, String commit);
 
-    void checkrecomendation();
+    void checkrecommendation();
 
 }

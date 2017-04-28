@@ -16,7 +16,7 @@ public enum Esub
 	Proposed_Idea,
         Project_Accepted,
         Project_Rejected,
-	Recomendation, Update;
+	Recomendation, Update, InternalEvaluation;
 
 	public static final int SIZE = java.lang.Integer.SIZE;
 
