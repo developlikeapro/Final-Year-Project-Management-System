@@ -1,6 +1,7 @@
 package fyp_management_system;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cinternal extends Cperson implements Iinternal {
 
@@ -49,13 +50,28 @@ public class Cinternal extends Cperson implements Iinternal {
 
     //testing pull request
     @Override
-    public final void provide_reremarks(int studid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public final void provide_recommendation(int studid) {
+         int i = searchid(studid);
+        if (i != -1) {
+            System.out.println(studentlist.get(i).getselectedproject().getprojectidea().getidea());
+            System.out.println("Enter Recomendations??");
+            String s = new Scanner(System.in).nextLine();
+            studentlist.get(i).getnotifications().add(new Cnotification(s, Esub.Recomendation, Erole.Internal, Erole.Student));
+            save();
+
+        } else {
+            System.out.println("Not found");
+        }
     }
 
     @Override
     public final void view_project(int studid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          int i = searchid(studid);
+        if (i != -1) {
+            System.out.println("Github Address :" + studentlist.get(i).getselectedproject().getproject_github_address());
+        } else {
+            System.out.println("Not found");
+        }
     }
 
     @Override
@@ -80,7 +96,6 @@ public class Cinternal extends Cperson implements Iinternal {
             System.out.println("Student IdNot found");
 
         }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
      private int searchid(int studid) {
 
@@ -90,6 +105,25 @@ public class Cinternal extends Cperson implements Iinternal {
             }
         }
         return -1;
+    }
+
+    private void save() {
+        for (int i = 0; i < studentlist.size(); i++) {
+            for (int j = 0; j < FYP_Management_System.Ocontroler.Lststud.size(); j++) {
+                if (studentlist.get(i).getstudentid()
+                        == FYP_Management_System.Ocontroler.Lststud.get(j).getstudentid()) {
+                    FYP_Management_System.Ocontroler.Lststud.set(j, studentlist.get(i));
+
+                }
+
+            }
+        }
+        for (int i = 0; i < FYP_Management_System.Ocontroler.Lstinternal.size(); i++) {
+            if (this.internalid == FYP_Management_System.Ocontroler.Lstinternal.get(i).internalid) {
+                FYP_Management_System.Ocontroler.Lstinternal.set(i, this);
+                break;
+            }
+        }
     }
 
 }

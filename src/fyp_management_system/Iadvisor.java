@@ -1,12 +1,10 @@
 package fyp_management_system;
 
-public interface Iadvisor {
+public interface Iadvisor extends Iteacherbehaviours {
 
     void checking_proposed_idea(int studid);
 
-    void provide_recommendation(int studid);
-
-    void view_project(int studid);
+    
 
      void recomendtointernal(int studid, int internalid);
 }

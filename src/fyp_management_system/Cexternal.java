@@ -2,8 +2,9 @@ package fyp_management_system;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Cexternal extends Cperson implements Iexternal {
+public class Cexternal extends Cperson implements Iteacherbehaviours {
 
     private int externalid;
 
@@ -47,13 +48,58 @@ public class Cexternal extends Cperson implements Iexternal {
     }
 
     @Override
-    public final void provide_remarks(int studid) {
+    public void provide_recommendation(int studid) {
+        int i = searchid(studid);
+        if (i != -1) {
+            System.out.println(studentlist.get(i).getselectedproject().getprojectidea().getidea());
+            System.out.println("Enter Recomendations??");
+            String s = new Scanner(System.in).nextLine();
+            studentlist.get(i).getnotifications().add(new Cnotification(s, Esub.Recomendation, Erole.External, Erole.Student));
+            save();
+
+        } else {
+            System.out.println("Not found");
+        }
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public final void view_project(int studid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void view_project(int studid) {
+        int i = searchid(studid);
+        if (i != -1) {
+            System.out.println("Github Address :" + studentlist.get(i).getselectedproject().getproject_github_address());
+        } else {
+            System.out.println("Not found");
+        }
+    }
+
+    private int searchid(int studid) {
+
+        for (int i = 0; i < studentlist.size(); i++) {
+            if (studentlist.get(i).getstudentid() == studid) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private void save() {
+        for (int i = 0; i < studentlist.size(); i++) {
+            for (int j = 0; j < FYP_Management_System.Ocontroler.Lststud.size(); j++) {
+                if (studentlist.get(i).getstudentid()
+                        == FYP_Management_System.Ocontroler.Lststud.get(j).getstudentid()) {
+                    FYP_Management_System.Ocontroler.Lststud.set(j, studentlist.get(i));
+
+                }
+
+            }
+        }
+        for (int i = 0; i < FYP_Management_System.Ocontroler.Lstexternal.size(); i++) {
+            if (this.externalid == FYP_Management_System.Ocontroler.Lstexternal.get(i).externalid) {
+                FYP_Management_System.Ocontroler.Lstexternal.set(i, this);
+                break;
+            }
+        }
     }
 
 }

@@ -1,10 +1,8 @@
 package fyp_management_system;
 
-public interface Iinternal {
+public interface Iinternal extends Iteacherbehaviours{
 
-     void provide_reremarks(int studid);
-
-     void view_project(int studid);
+    
 
      void recomendtoexternal(int studid, int internalid);
 
