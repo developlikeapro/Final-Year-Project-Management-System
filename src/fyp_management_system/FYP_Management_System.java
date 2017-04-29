@@ -22,20 +22,46 @@ public class FYP_Management_System {
      * @param args the command line arguments
      */
     public static Ccontroler Ocontroler = null;
-   // static Cserialization  obj = new Cserialization();
+    static Cserialization obj = new Cserialization();
 
     public static void main(String[] args) {
         // TODO code application logic 
         //static public Ccontroler Ocontroler=null;
-//        Ocontroler = obj.Mdeserialize();
-//        if (Ocontroler == null) {
-//            Ocontroler = new Ccontroler();
-//            obj.Mserialize(Ocontroler);
-//        }
+        Ocontroler = obj.Mdeserialize();
+        if (Ocontroler == null) {
+            Ocontroler = new Ccontroler();
+            obj.Mserialize(Ocontroler);
+        }
 
-       
         System.out.println("Welcome To FYP Management System ");
         //  input = new Scanner(System.in).nextLine();
+//        System.out.println("Select Your Role :\n1 For Student \n2 For Advisor\n3 For Internal\n4 For External");
+//        String input = new Scanner(System.in).nextLine();
+//        if (input == "1") {
+//            System.out.println("\n1 For Login \n2 For Create Account");
+//            input = new Scanner(System.in).nextLine();
+//
+//            if (input == "1") {
+//                System.out.println("Enter Username :");
+//                String ussername = new Scanner(System.in).nextLine();
+//                System.out.println("Enter Pass :");
+//                String pass = new Scanner(System.in).nextLine();
+//                Clogin ologin=new Clogin(Erole.Student, new loginsub(ussername, pass));
+//
+//            }
+//            else if (input=="2") {
+//               //
+//            }
+//
+//        } else if (input == "2") {
+//
+//        } else if (input == "3") {
+//
+//        } else if (input == "4") {
+//
+//        } else {
+//        }
+
         System.out.print("Condition:\n");
         System.out.println("Running.....:");
 

@@ -20,10 +20,10 @@ public class Cserialization {
     
 
     public Ccontroler Mdeserialize() {
-        Ccontroler obj = new Ccontroler();
+        Ccontroler obj = null;
 
         try {
-            FileInputStream fileIn = new FileInputStream("serri.ser");
+            FileInputStream fileIn = new FileInputStream("C:/Users/M GHOUS/Desktop/seer.dat");
             ObjectInputStream in = new ObjectInputStream(fileIn);
             obj = (Ccontroler) in.readObject();
             in.close();
@@ -42,7 +42,7 @@ public class Cserialization {
     public void Mserialize(Ccontroler obj) {
         try {
             FileOutputStream fileOut
-                    = new FileOutputStream("serri.ser");
+                    = new FileOutputStream("C:/Users/M GHOUS/Desktop/seer.dat");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
             out.writeObject(obj);
             out.close();

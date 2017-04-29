@@ -1,9 +1,10 @@
 package fyp_management_system;
 
 
+import java.io.Serializable;
 import java.util.*;
 
-public enum Erole
+public enum Erole implements Serializable
 {
 	Student,
 	Advisor,

@@ -1,6 +1,8 @@
 package fyp_management_system;
 
-public class Cperson 
+import java.io.Serializable;
+
+public class Cperson implements Serializable
 {
 	private String firstname;
 	public final String getfirstname()

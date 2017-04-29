@@ -1,6 +1,8 @@
 package fyp_management_system;
 
-public interface Iadvisor extends Iteacherbehaviours {
+import java.io.Serializable;
+
+public interface Iadvisor extends Iteacherbehaviours,Serializable {
 
     void checking_proposed_idea(int studid);
 

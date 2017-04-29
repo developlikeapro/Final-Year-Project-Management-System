@@ -8,7 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.*;
 
-public class Ccontroler {
+public class Ccontroler implements Serializable{
 
     public ArrayList<Cstudent> Lststud;
     public ArrayList<Cadvisor> Lstadvisor;

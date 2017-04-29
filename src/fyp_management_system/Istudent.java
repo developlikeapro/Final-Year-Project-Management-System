@@ -1,6 +1,8 @@
 package fyp_management_system;
 
-public interface Istudent {
+import java.io.Serializable;
+
+public interface Istudent extends Serializable{
 
     void proposeidea(String idea);
 

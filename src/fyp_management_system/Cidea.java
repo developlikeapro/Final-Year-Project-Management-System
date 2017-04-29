@@ -1,8 +1,9 @@
 package fyp_management_system;
 
+import java.io.Serializable;
 import java.util.*;
 //done 
-public class Cidea
+public class Cidea implements Serializable
 {
 	private String idea;
 	public final String getidea()

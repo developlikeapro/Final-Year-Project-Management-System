@@ -5,11 +5,13 @@
  */
 package fyp_management_system;
 
+import java.io.Serializable;
+
 /**
  *
  * @author M GHOUS
  */
-public interface Iteacherbehaviours {
+public interface Iteacherbehaviours extends Serializable{
     void provide_recommendation(int studid);
 
     void view_project(int studid);

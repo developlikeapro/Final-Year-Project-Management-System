@@ -5,11 +5,13 @@
  */
 package fyp_management_system;
 
+import java.io.Serializable;
+
 /**
  *
  * @author M GHOUS
  */
-public enum Esub
+public enum Esub implements Serializable
 {
 	Feedback,
 	Meeting,

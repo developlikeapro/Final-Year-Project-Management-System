@@ -1,6 +1,8 @@
 package fyp_management_system;
 
-public enum Egender
+import java.io.Serializable;
+
+public enum Egender implements Serializable
 {
 	Male,
 	Female,

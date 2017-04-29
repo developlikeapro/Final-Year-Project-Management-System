@@ -128,8 +128,9 @@ public class Cinternal extends Cperson implements Iinternal {
                 break;
             }
         }
+        FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
     }
-    /
-   /// FYP_Management_System.obj.Mserialize (FYP_Management_System.Ocontroler);
+    //
+   
 
 }

@@ -156,7 +156,7 @@ public class Cstudent extends Cperson implements Istudent {
 
             }
         }
-        //FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
+       FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
     }
 
 }

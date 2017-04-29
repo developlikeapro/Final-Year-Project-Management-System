@@ -5,11 +5,13 @@
  */
 package fyp_management_system;
 
+import java.io.Serializable;
+
 /**
  *
  * @author M GHOUS
  */
-public class Cnotification {
+public class Cnotification implements Serializable{
 
     private String message;
 

@@ -100,7 +100,7 @@ public class Cexternal extends Cperson implements Iteacherbehaviours {
                 break;
             }
         }
-        //FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
+        FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
 
     }
 
