@@ -23,6 +23,7 @@ public class Cstudent extends Cperson implements Istudent {
 
     public final void setcgpa(double value) {
         cgpa = value;
+        //cgpaaa
     }
     private Cadvisor myadvisor;
 
