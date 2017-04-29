@@ -13,6 +13,8 @@ public class Clogin {
                 if (user.getusername().equals(stlist.get(i).getusername()) && stlist.get(i).getpassword().equals(user.getpass())) {
                     System.out.println("Welcome " + stlist.get(i).getfirstname());
                     check = true;
+                    
+                    break;
                     //set Environment
                 }
             }
@@ -23,6 +25,7 @@ public class Clogin {
                 if (user.getusername().equals(advisorlst.get(i).getusername()) && advisorlst.get(i).getpassword().equals(user.getpass())) {
                     System.out.println("Welcome " + advisorlst.get(i).getfirstname());
                     check = true;
+                    break;
                     //set Environment
                 }
             }
@@ -33,6 +36,7 @@ public class Clogin {
                 if (user.getusername().equals(internallst.get(i).getusername()) && internallst.get(i).getpassword().equals(user.getpass())) {
                     System.out.println("Welcome " + internallst.get(i).getfirstname());
                     check = true;
+                    break;
                     //set Environment
                 }
             }
@@ -43,6 +47,7 @@ public class Clogin {
                 if (user.getusername().equals(externallst.get(i).getusername()) && externallst.get(i).getpassword().equals(user.getpass())) {
                     System.out.println("Welcome " + externallst.get(i).getfirstname());
                     check = true;
+                    break;
                     //set Environment
                 }
             }
