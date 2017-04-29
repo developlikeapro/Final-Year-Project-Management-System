@@ -51,6 +51,7 @@ public class Cadvisor extends Cperson implements Iadvisor {
     }
 
 //done
+    @Override
     public final void checking_proposed_idea(int studid) {
         int i = searchid(studid);
         if (i != -1) {
@@ -82,6 +83,7 @@ public class Cadvisor extends Cperson implements Iadvisor {
     }
 
 //done
+    @Override
     public final void provide_recommendation(int studid) {
         int i = searchid(studid);
         if (i != -1) {
@@ -98,6 +100,7 @@ public class Cadvisor extends Cperson implements Iadvisor {
     }
 
 //done
+    @Override
     public final void view_project(int studid) {
         int i = searchid(studid);
         if (i != -1) {
@@ -138,10 +141,11 @@ public class Cadvisor extends Cperson implements Iadvisor {
 
     }
 
-    public void recomendtointernal(int studid, int internalid) {
+    @Override
+    public final void recomendtointernal(int studid, int internalid) {
         int i = searchid(studid);
         if (i != -1) {
-            for (int j =     0; j < FYP_Management_System.Ocontroler.Lstinternal.size(); j++) {
+            for (int j = 0; j < FYP_Management_System.Ocontroler.Lstinternal.size(); j++) {
                 if (FYP_Management_System.Ocontroler.Lstinternal.get(j).getinternalid()
                         == internalid) {
                     FYP_Management_System.Ocontroler.Lstinternal.get(j).getstudentlist().add(studentlist.get(i));

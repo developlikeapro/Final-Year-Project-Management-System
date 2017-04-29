@@ -5,10 +5,32 @@ import java.util.ArrayList;
 
 public class Cexternal extends Cperson implements Iexternal {
 
-    private ArrayList<String> Cstudent;
+    private int externalid;
 
-    public final ArrayList<String> getstudents() {
-        return Cstudent;
+    public final int getinternalid() {
+        return externalid;
+    }
+
+    public final void setinternalid(int value) {
+        externalid = value;
+    }
+    private ArrayList<Cstudent> studentlist;
+
+    public final ArrayList<Cstudent> getstudentlist() {
+        return studentlist;
+    }
+
+    public final void setstudentlist(ArrayList<Cstudent> value) {
+        studentlist = value;
+    }
+    private ArrayList<Cnotification> notifications;
+
+    public final ArrayList<Cnotification> getnotifications() {
+        return notifications;
+    }
+
+    public final void setnotifications(ArrayList<Cnotification> value) {
+        notifications = value;
     }
 
     public Cexternal(String f_name, String l_name, String address, String contact_num, java.time.LocalDateTime dob, String email, Egender gender, int cnic, String username, String pass) {
@@ -23,27 +45,15 @@ public class Cexternal extends Cperson implements Iexternal {
         this.setusername(username);
         this.setpassword(pass);
     }
-    private ArrayList<String> notifications;
 
-    public final ArrayList<String> getnotifications() {
-        return notifications;
+    @Override
+    public final void provide_remarks(int studid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public final void setnotifications(ArrayList<String> value) {
-        notifications = value;
+    @Override
+    public final void view_project(int studid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public final void PassS() {
-
-        //Check project that it match with given criteria or not
-    }
-
-    public final void FailS() {
-        //Check project that it match with given criteria or not
-    }
-
-    public final void Remarks() {
-
-        //give remarks according to projects for job accomplish
-    }
 }

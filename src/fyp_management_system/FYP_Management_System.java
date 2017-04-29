@@ -27,9 +27,8 @@ public class FYP_Management_System {
         //static public Ccontroler Ocontroler=null;
         String input = "";
         System.out.println("Welcome To FYP Management System\nEnter username and pass now !");
-        
-      //  input = new Scanner(System.in).nextLine();
 
+        //  input = new Scanner(System.in).nextLine();
         System.out.print("Condition:\n");
         System.out.println("Running.....:");
 

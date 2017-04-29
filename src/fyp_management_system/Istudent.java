@@ -8,4 +8,7 @@ public interface Istudent {
 
     void checkrecommendation();
 
+    void viewall_sdvisor();
+
+    void selectadvisor(int adviisorid);
 }

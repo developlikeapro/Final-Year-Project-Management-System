@@ -43,34 +43,53 @@ public class Cinternal extends Cperson implements Iinternal {
         this.setcnic(cnic);
         this.setusername(username);
         this.setpassword(pass);
-        notifications=new ArrayList<Cnotification>();
-        studentlist=new ArrayList<Cstudent>();
+        notifications = new ArrayList<Cnotification>();
+        studentlist = new ArrayList<Cstudent>();
     }
 
-    public final void GiveMarks() {
-        System.out.println("Marks to student");
-        //...
-    }
-
-    public final void FrwdExternal() {
-        System.out.println("Forward To External");
-        //...
-    }
-
-    public final void Suggestion() {
-
-        //suggestion for betterment
-    }
-
-    public final void VIva() {
-
-        //taking viva for giving them marks according to there projects
-    }
-
-    public final void Task() {
-
-        //assign task for betterment of students project
-    }
     //testing pull request
+    @Override
+    public final void provide_reremarks(int studid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public final void view_project(int studid) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public final void recomendtoexternal(int studid, int externalid) {
+        int i = searchid(studid);
+        if (i != -1) {
+            for (int j = 0; j < FYP_Management_System.Ocontroler.Lstexternal.size(); j++) {
+                if (FYP_Management_System.Ocontroler.Lstexternal.get(j).getinternalid()
+                        == externalid) {
+                    FYP_Management_System.Ocontroler.Lstexternal.get(j).getstudentlist().add(studentlist.get(i));
+                    FYP_Management_System.Ocontroler.Lstexternal.get(j).getnotifications().add(
+                            new Cnotification(
+                                    "A Student Is Forwarded To You For External Evaluaion",
+                                    Esub.ExternalEvaluation,
+                                    Erole.Internal,
+                                    Erole.External));
+                    break;
+                }
+            }
+
+        } else {
+            System.out.println("Student IdNot found");
+
+        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+     private int searchid(int studid) {
+
+        for (int i = 0; i < studentlist.size(); i++) {
+            if (studentlist.get(i).getstudentid() == studid) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
