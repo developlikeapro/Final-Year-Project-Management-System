@@ -3,7 +3,7 @@ package fyp_management_system;
 import java.io.Serializable;
 import java.util.*;
 
-public class Cadvisor extends Cperson implements Iadvisor {
+public class Cadvisor extends Cperson implements Iadvisor  {
 
     private int advisorid;
 
@@ -138,6 +138,7 @@ public class Cadvisor extends Cperson implements Iadvisor {
                 break;
             }
         }
+       // FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
 
     }
 

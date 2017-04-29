@@ -1,5 +1,7 @@
 package fyp_management_system;
 
+import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -108,6 +110,7 @@ public class Cinternal extends Cperson implements Iinternal {
         return -1;
     }
 //done
+
     private void save() {
         for (int i = 0; i < studentlist.size(); i++) {
             for (int j = 0; j < FYP_Management_System.Ocontroler.Lststud.size(); j++) {
@@ -126,5 +129,6 @@ public class Cinternal extends Cperson implements Iinternal {
             }
         }
     }
+   // FYP_Management_System.obj.Mserialize (FYP_Management_System.Ocontroler);
 
 }

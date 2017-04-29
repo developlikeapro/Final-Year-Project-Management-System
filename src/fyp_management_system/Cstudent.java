@@ -2,6 +2,8 @@ package fyp_management_system;
 
 import java.util.*;
 
+import java.io.Serializable;
+
 public class Cstudent extends Cperson implements Istudent {
 
     private int studentid;
@@ -153,6 +155,7 @@ public class Cstudent extends Cperson implements Istudent {
 
             }
         }
+        //FYP_Management_System.obj.Mserialize(FYP_Management_System.Ocontroler);
     }
 
 }

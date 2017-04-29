@@ -5,6 +5,7 @@
  */
 package fyp_management_system;
 
+import static fyp_management_system.FYP_Management_System.Ocontroler;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -20,14 +21,20 @@ public class FYP_Management_System {
     /**
      * @param args the command line arguments
      */
-    public static Ccontroler Ocontroler = new Ccontroler();
+    public static Ccontroler Ocontroler = null;
+   // static Cserialization  obj = new Cserialization();
 
     public static void main(String[] args) {
         // TODO code application logic 
         //static public Ccontroler Ocontroler=null;
-        String input = "";
-        System.out.println("Welcome To FYP Management System ");
+//        Ocontroler = obj.Mdeserialize();
+//        if (Ocontroler == null) {
+//            Ocontroler = new Ccontroler();
+//            obj.Mserialize(Ocontroler);
+//        }
 
+       
+        System.out.println("Welcome To FYP Management System ");
         //  input = new Scanner(System.in).nextLine();
         System.out.print("Condition:\n");
         System.out.println("Running.....:");
