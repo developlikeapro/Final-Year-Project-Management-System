@@ -51,7 +51,7 @@ public class Cinternal extends Cperson implements Iinternal {
     //testing pull request
     @Override
     public final void provide_recommendation(int studid) {
-         int i = searchid(studid);
+        int i = searchid(studid);
         if (i != -1) {
             System.out.println(studentlist.get(i).getselectedproject().getprojectidea().getidea());
             System.out.println("Enter Recomendations??");
@@ -66,7 +66,7 @@ public class Cinternal extends Cperson implements Iinternal {
 
     @Override
     public final void view_project(int studid) {
-          int i = searchid(studid);
+        int i = searchid(studid);
         if (i != -1) {
             System.out.println("Github Address :" + studentlist.get(i).getselectedproject().getproject_github_address());
         } else {
@@ -97,7 +97,8 @@ public class Cinternal extends Cperson implements Iinternal {
 
         }
     }
-     private int searchid(int studid) {
+
+    private int searchid(int studid) {
 
         for (int i = 0; i < studentlist.size(); i++) {
             if (studentlist.get(i).getstudentid() == studid) {
@@ -106,7 +107,7 @@ public class Cinternal extends Cperson implements Iinternal {
         }
         return -1;
     }
-
+//done
     private void save() {
         for (int i = 0; i < studentlist.size(); i++) {
             for (int j = 0; j < FYP_Management_System.Ocontroler.Lststud.size(); j++) {
