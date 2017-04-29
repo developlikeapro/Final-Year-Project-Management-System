@@ -26,7 +26,7 @@ public class FYP_Management_System {
         // TODO code application logic 
         //static public Ccontroler Ocontroler=null;
         String input = "";
-        System.out.println("Welcome To FYP Management System\nEnter username and pass now !");
+        System.out.println("Welcome To FYP Management System");
 
         //  input = new Scanner(System.in).nextLine();
         System.out.print("Condition:\n");
