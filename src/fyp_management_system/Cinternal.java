@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Cinternal extends Cperson implements Iinternal {
-
+//
     private int internalid;
 
     public final int getinternalid() {
