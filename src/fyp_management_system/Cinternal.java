@@ -12,6 +12,7 @@ public class Cinternal extends Cperson implements Iinternal {
     public final int getinternalid() {
         return internalid;
     }
+    //
 
     public final void setinternalid(int value) {
         internalid = value;
