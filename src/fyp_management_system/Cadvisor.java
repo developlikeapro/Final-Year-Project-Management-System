@@ -55,7 +55,7 @@ public class Cadvisor extends Cperson implements Iadvisor,Serializable  {
     public final void checking_proposed_idea(int studid) {
         int i = searchid(studid);
         if (i != -1) {
-            .out.println("Project :\n" + studentlist.get(i).getlstofideas().get(studentlist.get(i).getlstofideas().size() - 1).getidea());
+          //yahan add karna hai
             System.out.println("1 For Accept\n2 For Reject");
             String s = new Scanner(System.in).nextLine();
 
